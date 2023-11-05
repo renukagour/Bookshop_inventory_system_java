@@ -24,7 +24,7 @@ public class Home extends javax.swing.JFrame {
     public Home(String userEmail) {
         initComponents();
         email = userEmail;
-        if (email.equals("admin@gmail.com")) {
+        if (!email.equals("admin@gmail.com")) {
             btnCategory.setVisible(false);
             btnNewBooks.setVisible(false);
             btnViewEditDeleteBooks.setVisible(false);
@@ -52,6 +52,7 @@ public class Home extends javax.swing.JFrame {
         btnNewBooks = new javax.swing.JButton();
         btnViewEditDeleteBooks = new javax.swing.JButton();
         btnVerifyUser = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -94,7 +95,7 @@ public class Home extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(716, 24, 181, 35));
+        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 30, 181, 35));
 
         jButton5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/questionmark.png"))); // NOI18N
@@ -119,6 +120,11 @@ public class Home extends javax.swing.JFrame {
         btnCategory.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnCategory.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/menu.png"))); // NOI18N
         btnCategory.setText("Manage Category");
+        btnCategory.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCategoryActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnCategory, new org.netbeans.lib.awtextra.AbsoluteConstraints(278, 711, 200, -1));
 
         btnNewBooks.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -139,7 +145,15 @@ public class Home extends javax.swing.JFrame {
         btnVerifyUser.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnVerifyUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/verified.png"))); // NOI18N
         btnVerifyUser.setText("Verify User");
+        btnVerifyUser.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVerifyUserActionPerformed(evt);
+            }
+        });
         getContentPane().add(btnVerifyUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(915, 711, -1, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/bg.jpg"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -161,12 +175,15 @@ public class Home extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
+    // change Password button
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
+        new ChangePassword(email).setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
+        new ChangeSecurityQuestion(email).setVisible(true);
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
@@ -181,6 +198,16 @@ public class Home extends javax.swing.JFrame {
     private void btnNewBooksActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNewBooksActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnNewBooksActionPerformed
+
+    private void btnCategoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCategoryActionPerformed
+        // TODO add your handling code here:
+        new ManageCategory().setVisible(true);
+    }//GEN-LAST:event_btnCategoryActionPerformed
+
+    private void btnVerifyUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerifyUserActionPerformed
+        // TODO add your handling code here:
+        new VerifyUsers().setVisible(true);
+    }//GEN-LAST:event_btnVerifyUserActionPerformed
 
     /**
      * @param args the command line arguments
@@ -228,5 +255,6 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
