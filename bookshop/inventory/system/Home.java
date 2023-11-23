@@ -25,7 +25,7 @@ public class Home extends javax.swing.JFrame {
         initComponents();
         email = userEmail;
         if (!email.equals("admin@gmail.com")) {
-            btnCategory.setVisible(false);
+            btnManageCategory.setVisible(false);
             btnNewBooks.setVisible(false);
             btnViewEditDeleteBooks.setVisible(false);
             btnVerifyUser.setVisible(false);
@@ -43,20 +43,29 @@ public class Home extends javax.swing.JFrame {
     private void initComponents() {
 
         btnLogout = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        btnViewBillPlaceOrder = new javax.swing.JButton();
+        btnPlaceOrder = new javax.swing.JButton();
+        btnChangePassword = new javax.swing.JButton();
+        btnChangeSecurityQuestion = new javax.swing.JButton();
         btnExit = new javax.swing.JButton();
-        btnCategory = new javax.swing.JButton();
         btnNewBooks = new javax.swing.JButton();
         btnViewEditDeleteBooks = new javax.swing.JButton();
         btnVerifyUser = new javax.swing.JButton();
+        btnManageCategory = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocation(new java.awt.Point(325, 125));
+        setUndecorated(true);
+        setPreferredSize(new java.awt.Dimension(970, 620));
+        setSize(new java.awt.Dimension(970, 620));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        btnLogout.setBackground(new java.awt.Color(255, 255, 204));
         btnLogout.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnLogout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/logout.png"))); // NOI18N
         btnLogout.setText("Logout");
@@ -65,48 +74,53 @@ public class Home extends javax.swing.JFrame {
                 btnLogoutActionPerformed(evt);
             }
         });
-        getContentPane().add(btnLogout, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 24, 122, 35));
+        getContentPane().add(btnLogout, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 550, 122, 35));
 
-        jButton2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/overview.png"))); // NOI18N
-        jButton2.setText("View Bill and Place order Details");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnViewBillPlaceOrder.setBackground(new java.awt.Color(255, 255, 204));
+        btnViewBillPlaceOrder.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnViewBillPlaceOrder.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/overview.png"))); // NOI18N
+        btnViewBillPlaceOrder.setText("View Bill and Place order Details");
+        btnViewBillPlaceOrder.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnViewBillPlaceOrderActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(393, 24, -1, 35));
+        getContentPane().add(btnViewBillPlaceOrder, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, -1, 35));
 
-        jButton3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/cart.png"))); // NOI18N
-        jButton3.setText("Place Order");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        btnPlaceOrder.setBackground(new java.awt.Color(255, 255, 204));
+        btnPlaceOrder.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnPlaceOrder.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/cart.png"))); // NOI18N
+        btnPlaceOrder.setText("Place Order");
+        btnPlaceOrder.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                btnPlaceOrderActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(197, 24, 163, 35));
+        getContentPane().add(btnPlaceOrder, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 290, 35));
 
-        jButton4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/password.png"))); // NOI18N
-        jButton4.setText("Change Paaswrd");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        btnChangePassword.setBackground(new java.awt.Color(255, 255, 204));
+        btnChangePassword.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnChangePassword.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/password.png"))); // NOI18N
+        btnChangePassword.setText("Change Paaswrd");
+        btnChangePassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                btnChangePasswordActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 30, 181, 35));
+        getContentPane().add(btnChangePassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 490, 250, 35));
 
-        jButton5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/questionmark.png"))); // NOI18N
-        jButton5.setText("Change Security Question");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        btnChangeSecurityQuestion.setBackground(new java.awt.Color(255, 255, 204));
+        btnChangeSecurityQuestion.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnChangeSecurityQuestion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/questionmark.png"))); // NOI18N
+        btnChangeSecurityQuestion.setText("Change Security Question");
+        btnChangeSecurityQuestion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                btnChangeSecurityQuestionActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 30, 253, 35));
+        getContentPane().add(btnChangeSecurityQuestion, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 540, 253, 35));
 
+        btnExit.setBackground(new java.awt.Color(255, 255, 204));
         btnExit.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/exit to app.png"))); // NOI18N
         btnExit.setText("Exit");
@@ -115,18 +129,9 @@ public class Home extends javax.swing.JFrame {
                 btnExitActionPerformed(evt);
             }
         });
-        getContentPane().add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(1223, 24, 99, 35));
+        getContentPane().add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 60, 99, 35));
 
-        btnCategory.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btnCategory.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/menu.png"))); // NOI18N
-        btnCategory.setText("Manage Category");
-        btnCategory.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCategoryActionPerformed(evt);
-            }
-        });
-        getContentPane().add(btnCategory, new org.netbeans.lib.awtextra.AbsoluteConstraints(278, 711, 200, -1));
-
+        btnNewBooks.setBackground(new java.awt.Color(255, 255, 204));
         btnNewBooks.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnNewBooks.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/book.png"))); // NOI18N
         btnNewBooks.setText("New Books");
@@ -135,25 +140,74 @@ public class Home extends javax.swing.JFrame {
                 btnNewBooksActionPerformed(evt);
             }
         });
-        getContentPane().add(btnNewBooks, new org.netbeans.lib.awtextra.AbsoluteConstraints(496, 711, 143, -1));
+        getContentPane().add(btnNewBooks, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 400, 143, 30));
 
+        btnViewEditDeleteBooks.setBackground(new java.awt.Color(255, 255, 204));
         btnViewEditDeleteBooks.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnViewEditDeleteBooks.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/update.png"))); // NOI18N
         btnViewEditDeleteBooks.setText("View ,Edit & Delete Books");
-        getContentPane().add(btnViewEditDeleteBooks, new org.netbeans.lib.awtextra.AbsoluteConstraints(654, 711, -1, -1));
+        btnViewEditDeleteBooks.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnViewEditDeleteBooksActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnViewEditDeleteBooks, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 400, -1, 30));
 
+        btnVerifyUser.setBackground(new java.awt.Color(255, 255, 204));
         btnVerifyUser.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnVerifyUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/verified.png"))); // NOI18N
-        btnVerifyUser.setText("Verify User");
+        btnVerifyUser.setText("View Users");
         btnVerifyUser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnVerifyUserActionPerformed(evt);
             }
         });
-        getContentPane().add(btnVerifyUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(915, 711, -1, -1));
+        getContentPane().add(btnVerifyUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 350, -1, 30));
+
+        btnManageCategory.setBackground(new java.awt.Color(255, 255, 204));
+        btnManageCategory.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnManageCategory.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/menu.png"))); // NOI18N
+        btnManageCategory.setText("Manage Category");
+        btnManageCategory.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnManageCategoryActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnManageCategory, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 350, 240, -1));
+
+        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
+
+        jLabel10.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel10.setText("Book Shop Inventory System");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(387, 387, 387)
+                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(398, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel10)
+                .addContainerGap(12, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 980, -1));
+
+        jLabel3.setFont(new java.awt.Font("Algerian", 1, 18)); // NOI18N
+        jLabel3.setText("*Only For Admin");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 280, 180, -1));
+
+        jTextField1.setBackground(new java.awt.Color(204, 204, 204));
+        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 600, 260));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/bg.jpg"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 980, 600));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -167,29 +221,33 @@ public class Home extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnLogoutActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnViewBillPlaceOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewBillPlaceOrderActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+         new ViewBillsOrderPlacedDetails().setVisible(true);
+    }//GEN-LAST:event_btnViewBillPlaceOrderActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void btnPlaceOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlaceOrderActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+        setVisible(false);
+        //passing email so identify who created bill
+        new PlaceOrder(email).setVisible(true);
+    }//GEN-LAST:event_btnPlaceOrderActionPerformed
 
     // change Password button
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void btnChangePasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnChangePasswordActionPerformed
         // TODO add your handling code here:
         new ChangePassword(email).setVisible(true);
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_btnChangePasswordActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void btnChangeSecurityQuestionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnChangeSecurityQuestionActionPerformed
         // TODO add your handling code here:
         new ChangeSecurityQuestion(email).setVisible(true);
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_btnChangeSecurityQuestionActionPerformed
 
     private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
         int a = JOptionPane.showConfirmDialog(null, "Do you really want to close Application  ", "Select", JOptionPane.YES_NO_OPTION);
         if (a == 0) {
-           System.exit(0);
+            System.exit(0);
         }
 
         // TODO add your handling code here:
@@ -197,17 +255,23 @@ public class Home extends javax.swing.JFrame {
 
     private void btnNewBooksActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNewBooksActionPerformed
         // TODO add your handling code here:
+        new AddNewBook().setVisible(true);
     }//GEN-LAST:event_btnNewBooksActionPerformed
-
-    private void btnCategoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCategoryActionPerformed
-        // TODO add your handling code here:
-        new ManageCategory().setVisible(true);
-    }//GEN-LAST:event_btnCategoryActionPerformed
 
     private void btnVerifyUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerifyUserActionPerformed
         // TODO add your handling code here:
         new VerifyUsers().setVisible(true);
     }//GEN-LAST:event_btnVerifyUserActionPerformed
+
+    private void btnViewEditDeleteBooksActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewEditDeleteBooksActionPerformed
+        // TODO add your handling code here:
+        new ViewEditDeleteBook().setVisible(true);
+    }//GEN-LAST:event_btnViewEditDeleteBooksActionPerformed
+
+    private void btnManageCategoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageCategoryActionPerformed
+        // TODO add your handling code here:
+        new ManageCategory().setVisible(true);
+    }//GEN-LAST:event_btnManageCategoryActionPerformed
 
     /**
      * @param args the command line arguments
@@ -245,16 +309,20 @@ public class Home extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnCategory;
+    private javax.swing.JButton btnChangePassword;
+    private javax.swing.JButton btnChangeSecurityQuestion;
     private javax.swing.JButton btnExit;
     private javax.swing.JButton btnLogout;
+    private javax.swing.JButton btnManageCategory;
     private javax.swing.JButton btnNewBooks;
+    private javax.swing.JButton btnPlaceOrder;
     private javax.swing.JButton btnVerifyUser;
+    private javax.swing.JButton btnViewBillPlaceOrder;
     private javax.swing.JButton btnViewEditDeleteBooks;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }

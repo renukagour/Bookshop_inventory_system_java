@@ -17,7 +17,7 @@ public class UserDao {
 
     public static void save(User user) {
         String query = "insert into user(name,email,mobileNumber,address,password,securityQuestion,answer,status) values('" + user.getName() + "','" + user.getEmail() + "','" + user.getMobileNumber() + "','" + user.getAddress() + "','" + user.getPassword() + "','" + user.getSecurityQuestion() + "','" + user.getAnswer() + "','false')";
-        DbOperations.setDataOrDelete(query, "Registered Successfully wait for Admin Approval");
+        DbOperations.setDataOrDelete(query, "Registered Successfully ");
     }
 
     public static User login(String email, String password) {
@@ -26,7 +26,7 @@ public class UserDao {
             ResultSet rs = DbOperations.getData("select * from user where email='" + email + "' and password='" + password + "'");
             while (rs.next()) {
                 user = new User();
-                user.setStatus(rs.getString("status"));
+//                user.setStatus(rs.getString("status"));
 
             }
         } catch (Exception e) {
@@ -71,7 +71,7 @@ public class UserDao {
                 user.setMobileNumber(rs.getString("mobilenumber"));
                 user.setAddress(rs.getString("address"));
                 user.setSecurityQuestion(rs.getString("securityQuestion"));
-                user.setStatus(rs.getString("status"));
+//                user.setStatus(rs.getString("status"));
                 //add this in arraylist
                 arrayList.add(user);
 

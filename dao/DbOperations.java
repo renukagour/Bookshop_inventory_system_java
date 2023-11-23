@@ -13,6 +13,7 @@ import java.sql.*;
  */
 public class DbOperations {
 
+    //method to execute query
     public static void setDataOrDelete(String Query, String msg) {
         try {
             Connection con = ConnectionProvider.getcon();

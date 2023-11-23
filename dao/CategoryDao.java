@@ -4,6 +4,11 @@
  */
 package dao;
 
+/**
+ *
+ * @author Renuka Gour
+ */
+
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import model.Category;
@@ -15,8 +20,13 @@ import java.sql.*;
 // creating category table
 public class CategoryDao {
     public static void save(Category category){
-        String query ="insert into category (name) values('"+category.getName()+"')";
+        try {
+            String query ="insert into category (id,name) values('"+category.getId()+"','"+category.getName()+"')";
         DbOperations.setDataOrDelete(query, "Category Added Successfully");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Category ID Already Exist");
+        }
+        
     }
   //setting and getting category   
     public static ArrayList<Category> getAllRecords(){
