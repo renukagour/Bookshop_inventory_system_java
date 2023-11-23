@@ -54,7 +54,6 @@ public class Home extends javax.swing.JFrame {
         btnManageCategory = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
 
@@ -101,7 +100,7 @@ public class Home extends javax.swing.JFrame {
         btnChangePassword.setBackground(new java.awt.Color(255, 255, 204));
         btnChangePassword.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnChangePassword.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/password.png"))); // NOI18N
-        btnChangePassword.setText("Change Paaswrd");
+        btnChangePassword.setText("Change Paasword");
         btnChangePassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnChangePasswordActionPerformed(evt);
@@ -140,7 +139,7 @@ public class Home extends javax.swing.JFrame {
                 btnNewBooksActionPerformed(evt);
             }
         });
-        getContentPane().add(btnNewBooks, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 400, 143, 30));
+        getContentPane().add(btnNewBooks, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 350, 143, 30));
 
         btnViewEditDeleteBooks.setBackground(new java.awt.Color(255, 255, 204));
         btnViewEditDeleteBooks.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -151,7 +150,7 @@ public class Home extends javax.swing.JFrame {
                 btnViewEditDeleteBooksActionPerformed(evt);
             }
         });
-        getContentPane().add(btnViewEditDeleteBooks, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 400, -1, 30));
+        getContentPane().add(btnViewEditDeleteBooks, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 350, -1, 30));
 
         btnVerifyUser.setBackground(new java.awt.Color(255, 255, 204));
         btnVerifyUser.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -162,7 +161,7 @@ public class Home extends javax.swing.JFrame {
                 btnVerifyUserActionPerformed(evt);
             }
         });
-        getContentPane().add(btnVerifyUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 350, -1, 30));
+        getContentPane().add(btnVerifyUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 300, -1, 30));
 
         btnManageCategory.setBackground(new java.awt.Color(255, 255, 204));
         btnManageCategory.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -173,7 +172,7 @@ public class Home extends javax.swing.JFrame {
                 btnManageCategoryActionPerformed(evt);
             }
         });
-        getContentPane().add(btnManageCategory, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 350, 240, -1));
+        getContentPane().add(btnManageCategory, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 300, 240, -1));
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
 
@@ -199,15 +198,11 @@ public class Home extends javax.swing.JFrame {
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 980, -1));
 
-        jLabel3.setFont(new java.awt.Font("Algerian", 1, 18)); // NOI18N
-        jLabel3.setText("*Only For Admin");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 280, 180, -1));
-
         jTextField1.setBackground(new java.awt.Color(204, 204, 204));
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 600, 260));
+        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 600, 190));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/bg.jpg"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 980, 600));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 970, 600));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -321,7 +316,6 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JButton btnViewEditDeleteBooks;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
